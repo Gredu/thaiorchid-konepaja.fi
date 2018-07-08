@@ -1,0 +1,122 @@
+body {
+  background-color: #0a0e15;
+  padding: 0;
+  margin: 0;
+  color: #fff9ec;
+  font-family: verdana;
+}
+
+a {
+  color: #fff9ec;
+  text-decoration: none;
+  margin-right: 1.4em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  color: #cf8f04;
+}
+
+img.hide {
+  display: none;
+}
+
+#jumbotron {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: 24vh;
+  grid-template-areas: 
+    ". logo logo ."
+    ". logo logo .";
+}
+
+.logo {
+  grid-area: logo;
+  align-self: center;
+  justify-self: center;
+}
+
+.logo img {
+  width: 300px;
+  height: 200px;
+}
+
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr; 
+}
+
+#menu-list {
+  grid-column-start: 2;
+  text-align: center;
+}
+
+#menu-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1em;
+}
+
+#menu-list ul li {
+  display: inline;
+}
+
+#menu-content {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+#menu-content table {
+  border: solid;
+}
+
+#menu-content table .price {
+  text-align: right;
+}
+
+#menu-content table .food-id {
+  text-align: center;
+  height: 3em;
+  width: 3em;
+}
+
+table td {
+  border: solid;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top-style: dashed;
+  border-color: #181818;
+  align-items: center top;
+  margin-top: 2.5em;
+}
+
+#footer ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: .9em;
+}
+
+#footer-contact {
+  grid-column-start: 2;
+}
+
+#footer-opening {
+
+}
+
+.opening-time-list {
+  margin-bottom; 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.opening-time-list li {
+  margin-bottom: 0.1em;
+}
