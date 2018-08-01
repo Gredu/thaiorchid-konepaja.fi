@@ -53,6 +53,15 @@ img.hide {
 #menu-list {
   grid-column-start: 2;
   text-align: center;
+  position: absolute;
+  top: 3.5em;
+  left: 1em;
+  text-shadow:
+  1px 1px #000, 
+  -1px 1px #000, 
+  1px -1px #000, 
+  -1px -1px #000,
+  1px 1px 5px #000;
 }
 
 #menu-list ul {
@@ -68,6 +77,8 @@ img.hide {
 #menu-content {
   grid-column-start: 2;
   grid-row-start: 2;
+  position: relative;
+  text-align: center;
 }
 
 #menu-content table {
