@@ -1,13 +1,17 @@
+$background-color: #0a0e15;
+$default-font-color: #fff9ec;
+$header-color: #cf8f04;
+
 body {
-  background-color: #0a0e15;
+  background-color: $background-color;
   padding: 0;
   margin: 0;
-  color: #fff9ec;
+  color: $default-font-color;
   font-family: verdana;
 }
 
 a {
-  color: #fff9ec;
+  color: $default-font-color;
   text-decoration: none;
   margin-right: 1.4em;
 }
@@ -17,7 +21,7 @@ a:hover {
 }
 
 h2 {
-  color: #cf8f04;
+  color: $header-color;
 }
 
 img.hide {
@@ -38,11 +42,10 @@ img.hide {
   grid-area: logo;
   align-self: center;
   justify-self: center;
-}
-
-.logo img {
-  width: 300px;
-  height: 200px;
+  img {
+    width: 300px;
+    height: 200px;
+  }
 }
 
 #menu {
@@ -62,16 +65,14 @@ img.hide {
   1px -1px #000, 
   -1px -1px #000,
   1px 1px 5px #000;
-}
-
-#menu-list ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 1em;
-}
-
-#menu-list ul li {
-  display: inline;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em;
+    li {
+      display: inline;
+    }
+  }
 }
 
 #menu-content {
@@ -79,20 +80,17 @@ img.hide {
   grid-row-start: 2;
   position: relative;
   text-align: center;
-}
-
-#menu-content table {
-  border: solid;
-}
-
-#menu-content table .price {
-  text-align: right;
-}
-
-#menu-content table .food-id {
-  text-align: center;
-  height: 3em;
-  width: 3em;
+  table {
+    border: solid;
+    .price {
+      text-align: right;
+    }
+    .food-id {
+      text-align: center;
+      height: 3em;
+      width: 3em;
+    }
+  }
 }
 
 table td {
@@ -118,16 +116,12 @@ table td {
   grid-column-start: 2;
 }
 
-#footer-opening {
-
-}
-
 .opening-time-list {
-  margin-bottom; 20px;
+  margin-bottom: 20px;
   list-style-type: none;
   padding: 0;
+  li {
+    margin-bottom: 0.1em;
+  }
 }
 
-.opening-time-list li {
-  margin-bottom: 0.1em;
-}
