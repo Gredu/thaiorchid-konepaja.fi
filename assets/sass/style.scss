@@ -1,13 +1,18 @@
 $background-color: #0a0e15;
+$background-pattern: url('/img/background-pattern.jpg');
+$background-pattern-height: 46px;
+
 $default-font-color: #fff9ec;
 $header-color: #cf8f04;
+
+$font-family: Verdana, Arial, Helvetica, sans-serif;
 
 body {
   background-color: $background-color;
   padding: 0;
   margin: 0;
   color: $default-font-color;
-  font-family: verdana;
+  font-family: $font-family;
 }
 
 a {
@@ -26,6 +31,39 @@ h2 {
 
 img.hide {
   display: none;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: $background-pattern-height;
+  background-image: $background-pattern;
+}
+
+%header-equal {
+  vertical-align: middle;
+  line-height: $background-pattern-height;
+  display: none;
+}
+
+.header-menu {
+  @extend %header-equal;
+  text-align: middle;
+
+}
+
+.language {
+  @extend %header-equal;
+  text-align: right;
+  // display: none;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline;
+    }
+  }
 }
 
 #jumbotron {
