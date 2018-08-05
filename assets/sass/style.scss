@@ -3,9 +3,11 @@ $background-pattern: url('/img/background-pattern.jpg');
 $background-pattern-height: 46px;
 
 $default-font-color: #fff9ec;
-$header-color: #cf8f04;
+$header-color: #ac8d68;
 
 $font-family: Verdana, Arial, Helvetica, sans-serif;
+
+$padding-top: 2.2em;
 
 body {
   background-color: $background-color;
@@ -25,9 +27,41 @@ a:hover {
   text-decoration: underline;
 }
 
-h2 {
+h3 {
   color: $header-color;
 }
+
+// ----------------------------------
+
+.plate {
+  width: 410px;
+  margin: $padding-top auto;
+}
+.script {
+  font-family: "Seaweed Script";
+  color: $header-color;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  margin:0;
+}
+.script span {
+  background-color: $background-color;
+  padding: 0 0.3em;
+}
+.script:before {
+  content:"";
+  display: block;
+  position: absolute;
+  z-index:-1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 3px solid $header-color;
+  // border-bottom: $header-color;
+}
+
+// ----------------------------------
+
 
 img.hide {
   display: none;
@@ -65,8 +99,6 @@ img.hide {
     }
   }
 }
-
-$padding-top: 2.2em;
 
 #content {
   display: grid;
