@@ -95,6 +95,10 @@ $logo-scale-factor: 0.84;
   padding: 9px;
 }
 
+.post-image {
+  display: none;
+}
+
 #menu {
   display: grid;
   grid-template-columns: 1fr 800px 1fr; 
