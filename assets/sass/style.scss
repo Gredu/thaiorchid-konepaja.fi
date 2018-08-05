@@ -66,29 +66,39 @@ img.hide {
   }
 }
 
-#jumbotron {
+$padding-top: 2.2em;
+
+#content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: 24vh;
-  grid-template-areas: 
-    ". logo logo ."
-    ". logo logo .";
+  grid-padding: 100px;
+  padding-top: $padding-top;
+  button {
+    display: none;
+  }
 }
 
-.logo {
-  grid-area: logo;
-  align-self: center;
-  justify-self: center;
-  img {
-    width: 300px;
-    height: 200px;
-  }
+$logo-scale-factor: 0.84;
+
+.logo img {
+  width: 400px;
+  height: 227px;
+  // margin: $padding-top;
+  transform: scale(0.8, 0.8);
+}
+
+#facebook {
+  grid-column: span 3;
+}
+
+.facebook {
+  padding: 9px;
 }
 
 #menu {
   display: grid;
   grid-template-columns: 1fr 800px 1fr; 
+  padding-top: $padding-top;
 }
 
 #menu-list {
