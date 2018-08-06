@@ -11,14 +11,14 @@
 
     <div id="header">
       <div></div>
-      <div class="header-menu">foo</div>
+      <div class="header-menu"></div>
       <div class="language">
         <ul>
           <li>
-            <a href="#">fi</a>
+            <a id="change-to-fi" href="#">fi</a>
           </li>
           <li>
-            <a href="#">en</a>
+            <a id="change-to-en" href="#">en</a>
           </li>
         </ul>
       </div>
@@ -103,8 +103,12 @@
       </div>
     </div>
 
-    <script src="js/menu.js" charset="utf-8"></script>
+    <!-- <script src="js/menu.js" charset="utf&#45;8"></script> -->
     <!-- <script src="js/facebook.js" charset="utf&#45;8"></script> -->
+    <!-- <script src="js/language.js" charset="utf&#45;8"></script> -->
+
+    {{ $js := resources.Get "js/menu.js" | resources.Fingerprint "sha512" }}
+    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 
   </body>
 </html>
