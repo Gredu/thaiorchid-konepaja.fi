@@ -34,16 +34,17 @@ const menuEn = ['foo1', 'foo2', 'foo3', 'foo4', 'foo5', 'foo6', 'foo7', 'foo8', 
 const changeToEn = document.getElementById('change-to-en')
 const changeToFi = document.getElementById('change-to-fi')
 
-changeToEn.onclick = function(eventInformation) {
+const changeTo = function(eventInformation, changeTo) {
   for (let i = 0; i < menuList.length; i++) {
-    menuList[i].innerHTML = menuEn[i]
+    menuList[i].innerHTML = changeTo[i]
   }
   eventInformation.preventDefault()
 }
 
+changeToEn.onclick = function(eventInformation) {
+  changeTo(eventInformation, menuEn)
+}
+
 changeToFi.onclick = function(eventInformation) {
-  for (let i = 0; i < menuList.length; i++) {
-    menuList[i].innerHTML = menuFi[i]
-  }
-  eventInformation.preventDefault()
+  changeTo(eventInformation, menuFi)
 }
