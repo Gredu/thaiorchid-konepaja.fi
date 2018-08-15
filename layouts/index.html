@@ -122,7 +122,6 @@
     {{ $js := resources.Get "js/menu.js" | resources.Fingerprint "sha512" }}
     <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" charset="utf-8"></script>
 
-    {{ $facebook := resources.Get "js/facebook.js" | resources.Fingerprint "sha512" }}
     <!-- <script type="text/javascript" src="{{ $facebook.Permalink }}" integrity="{{ $facebook.Data.Integrity }}"charset="utf&#45;8"></script> -->
 
   </body>
