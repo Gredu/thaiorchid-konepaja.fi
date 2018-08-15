@@ -9,26 +9,39 @@
   </head>
   <body>
 
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1&appId=2169120616462288&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <div id="header">
       <div></div>
       <div class="header-menu"></div>
       <div class="language">
-        <ul>
-          <li>
-            <a id="change-to-fi" href="#">fi</a>
-          </li>
-          <li>
-            <a id="change-to-en" href="#">en</a>
-          </li>
-        </ul>
+        <!-- <ul> -->
+        <!--   <li> -->
+        <!--     <a id="change&#45;to&#45;fi" href="#">fi</a> -->
+        <!--   </li> -->
+        <!--   <li> -->
+        <!--     <a id="change&#45;to&#45;en" href="#">en</a> -->
+        <!--   </li> -->
+        <!-- </ul> -->
       </div>
     </div>
 
     <div id="content">
       <div class="logo"><img src="img/thaiorchid-logo.png" alt="Thaiorchid-konepaja logo"></div>
-      <div id="facebook">
-        <div class='sk-ww-facebook-feed' data-embed-id='12434'></div><script src='https://www.sociablekit.com/app/embed/facebook-feed/widget.js'></script>
-      </div>
+      <!-- <div id="facebook"> -->
+      <!--   <div class='sk&#45;ww&#45;facebook&#45;feed' data&#45;embed&#45;id='12434'></div><script src='https://www.sociablekit.com/app/embed/facebook&#45;feed/widget.js'></script> -->
+      <!-- </div> -->
+
+      <!-- <div class="fb&#45;page" data&#45;href="https://www.facebook.com/THAI&#45;Orchid&#45;Konepaja&#45;395884650821419/" data&#45;tabs="timeline" data&#45;small&#45;header="true" data&#45;adapt&#45;container&#45;width="true" data&#45;hide&#45;cover="true" data&#45;show&#45;facepile="false"><blockquote cite="https://www.facebook.com/THAI&#45;Orchid&#45;Konepaja&#45;395884650821419/" class="fb&#45;xfbml&#45;parse&#45;ignore"><a href="https://www.facebook.com/THAI&#45;Orchid&#45;Konepaja&#45;395884650821419/">THAI Orchid&#45;Konepaja</a></blockquote></div> -->
+      <!-- <div class="fb&#45;page" data&#45;href="https://www.facebook.com/THAI&#45;Orchid&#45;Konepaja&#45;395884650821419/" data&#45;tabs="timeline" data&#45;small&#45;header="false" data&#45;adapt&#45;container&#45;width="true" data&#45;hide&#45;cover="false" data&#45;show&#45;facepile="false"><blockquote cite="https://www.facebook.com/facebook" class="fb&#45;xfbml&#45;parse&#45;ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div> -->
+
       <!-- <div class="logo">foo</div> -->
       <!-- <div class="facebook"> -->
       <!--   <h3>Facebook title</h3> -->
@@ -104,11 +117,13 @@
     </div>
 
     <!-- <script src="js/menu.js" charset="utf&#45;8"></script> -->
-    <!-- <script src="js/facebook.js" charset="utf&#45;8"></script> -->
     <!-- <script src="js/language.js" charset="utf&#45;8"></script> -->
 
     {{ $js := resources.Get "js/menu.js" | resources.Fingerprint "sha512" }}
-    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+    <script type="text/javascript" src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" charset="utf-8"></script>
+
+    {{ $facebook := resources.Get "js/facebook.js" | resources.Fingerprint "sha512" }}
+    <!-- <script type="text/javascript" src="{{ $facebook.Permalink }}" integrity="{{ $facebook.Data.Integrity }}"charset="utf&#45;8"></script> -->
 
   </body>
 </html>
