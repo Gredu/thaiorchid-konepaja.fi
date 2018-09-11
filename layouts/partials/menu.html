@@ -1,0 +1,16 @@
+<div class="plate">
+  <h2 class="script"><span>Menu</span></h2>
+</div>
+
+<div id="menu">
+  <div id="menu-content">
+    {{ .Content }}
+    <div id="menu-list">
+      <ul>
+        {{ range .Site.Taxonomies.categories.menu }}
+        <li><a class="menu-category" href="{{ .Page.RelPermalink }}#menu">{{ .Page.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

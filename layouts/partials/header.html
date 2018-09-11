@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" type="text/css" media="all" />
+    <title>Thaiorchid Konepaja</title>
+  </head>
+  <body>
+    <div id="header">
+      <div></div>
+      <div class="header-menu"></div>
+      <div class="language">
+        <!-- <ul> -->
+        <!--   <li> -->
+        <!--     <a id="change&#45;to&#45;fi" href="#">fi</a> -->
+        <!--   </li> -->
+        <!--   <li> -->
+        <!--     <a id="change&#45;to&#45;en" href="#">en</a> -->
+        <!--   </li> -->
+        <!-- </ul> -->
+      </div>
+    </div>
